@@ -28,7 +28,7 @@ For more guides on stencil.js components, please [check](https://stenciljs.com/d
 To start building a new web component using Stencil, clone this repo to a new directory:
 
 ```bash
-git clone https://github.com/ionic-team/s-swipe.git s-swipe
+git clone https://github.com/ranjeetsinghbnl/s-swipe.git s-swipe
 cd s-swipe
 git remote rm origin
 ```
