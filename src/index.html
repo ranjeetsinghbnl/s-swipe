@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/s-swipe.esm.js"></script>
+  <script nomodule src="/build/s-swipe.js"></script>
+
+</head>
+
+<body>
+
+  <s-swipe class="s-swipe">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+    Lorem Ipsum.
+  </s-swipe>
+  <br /><br /><br />
+  <s-swipe class="s-swipe">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+    Lorem Ipsum.
+  </s-swipe>
+  <div id="details"></div>
+</body>
+<script>
+  (async () => {
+    await customElements.whenDefined('s-swipe');
+    const todoListElement = document.querySelectorAll('s-swipe');
+    Object.entries(todoListElement).map((object) => {
+      object[1].addEventListener('sSwipe', function (e) {
+        document.getElementById("details").innerHTML = JSON.stringify(e.detail)
+        //alert(JSON.stringify(e.detail))
+      }, false);
+    });
+
+  })();
+
+</script>
+
+</html>

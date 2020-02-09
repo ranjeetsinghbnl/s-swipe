@@ -1,0 +1,35 @@
+{
+  "name": "s-swipe",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/s-swipe/s-swipe.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "lint": "npm run lint:src",
+    "lint:src": "tslint --config ./tslint.json --project ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.8.3",
+    "tslint": "^5.20.1",
+    "tslint-stencil": "^1.0.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/sass": "^1.1.1"
+  }
+}
